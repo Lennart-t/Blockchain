@@ -5,5 +5,5 @@ We have developed HSG coin: a simple blockchain implementation in the form of a 
 Our project includes a Back End which we developed using Python and a Front End based on HTML. For the main functionalities we followed a guide from Anton Tarasov (https://u.today/how-to-build-a-blockchain-application-with-python). 
 
 The core features of HSG Coin are:
-1) Input Fields: Enter your name, the amount and the receiver and submit the information to add a block to the blockchain. The programme will not create a block if the input is invalid and display a corresponding flash message.
+1) Input Fields: Enter your name, the amount and the receiver and submit the information to add a block to the blockchain. The programme will not create a block if the input is invalid and display a corresponding message.
 2) Verification: Click the button to view the validity of each block.
