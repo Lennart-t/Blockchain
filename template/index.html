@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for res in feedback %}
+        <div class="feedback" >
+            <br>
+            <center><strong style="color: red;">{{res}}</strong></center>
+        </div>
+    {% endfor %}
+
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/HFV9CPt/Logo3.png" alt="Logo" border="0" width="100" height="100" vspace="25" hspace="25"></a></center>
+    <h1 align="center">Welcome to the newest HSG payment system: HSG-COIN!</h1><br>
+    <p align="justify">
+    We have developed HSG-COIN: a simple blockchain implementation in the form of a decentralized app (dAPP)
+    that allows you to transfer money from a payer to a payee. In addition, we have implemented a block
+    verification mechanism which enables you to test the validity of each block. <br><br>
+    Using HSG Coin is easy: Just enter your name (Payer), the amount you would like to transfer (Amount) and the recipient (Receiver).</p>
+
+    <form action="{{url_for('index')}}" method ="POST">
+        <div class="form_group">
+           <label for="InputPayer">Payer</label>
+           <input type="text" class="form-control" id="InputPayer" placeholder="Name of sender" name="sender" value="{{ request.form.get('sender', '') }}">
+           <small id="InputPlayerHelpText" class="form-text text-muted">
+            Please input your (user)name.
+           </small>
+        </div>
+        &nbsp;&nbsp;
+        <div class="form_group">
+           <label for="InputAmount">Amount</label>
+           <input type="text" class="form-control" id="InputAmount" placeholder="Amount" name="amount" value="{{ request.form.get('amount', '') }}">
+           <small id="InputAmountHelpText" class="form-text text-muted">
+            Please input the amount of coins you want to send. The amount must be strictly greater than zero.
+           </small>
+        </div>
+        &nbsp;&nbsp;
+        <div class="form_group">
+           <label for="InputReceiver">Receiver</label>
+           <input type="text" class="form-control" id="InputReceiver" placeholder="Name of receiver" name="receiver" value="{{ request.form.get('receiver', '') }}">
+           <small id="InputReceiverHelpText" class="form-text text-muted">
+            Please input the (user)name of the receiver.
+           </small>
+           <br>
+        </div>
+
+       <center><button type="submit" class="btn btn-primary">Submit your transaction</button></center>
+        {% with messages = get_flashed_messages() %}
+            {% if message %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </form>
+
+    <br>
+    <br>
+    <h4 align = "center"> Click here to verify your blockchain: </h4>
+    <form action="{{url_for('verification')}}" method="GET">
+        <center><button type="submit" class="btn btn-success">Verify blockchain</button></center>
+    </form>
+    <br>
+    <br>
+{% endblock %}

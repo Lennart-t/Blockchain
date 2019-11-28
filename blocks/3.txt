@@ -1,0 +1,6 @@
+{
+    "payer": "Lennart",
+    "amount": "10.10",
+    "payee": "Jason",
+    "hash": "66fc04dd815497bbecf798cf6ebfd5bfc231502f9f93521fdcc905b3bc031134"
+}

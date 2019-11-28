@@ -1,0 +1,6 @@
+{
+    "payer": "Laurens",
+    "amount": "1000",
+    "payee": "Jonas",
+    "hash": "21b7d34d7ab2eb29aea8d018d4355ff6cb10887ba37ae794f3eae23efa746799"
+}

@@ -1,0 +1,6 @@
+{
+	“payer”: “Genesis”,
+	“amount”: 1000000,
+	“payee”: “Genesis2”,
+	“hash”: “”
+}
