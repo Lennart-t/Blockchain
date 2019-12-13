@@ -6,7 +6,6 @@ from flask import url_for
 from flask import redirect
 
 app = Flask(__name__, template_folder='template')
-app.secret_key = "Random"
 
 
 @app.route('/', methods=['POST', 'GET'])

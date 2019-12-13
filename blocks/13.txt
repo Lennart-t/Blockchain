@@ -1,6 +1,0 @@
-{
-    "payer": "r",
-    "amount": "3",
-    "payee": "r",
-    "hash": "65d92f82a598a6346749df0439ca058ea69e308c7c77870a200d472a3eac36e4"
-}
