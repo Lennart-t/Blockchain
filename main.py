@@ -8,22 +8,46 @@ from flask import redirect
 app = Flask(__name__, template_folder='template')
 
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/', methods=['GET'])
 def index():
-    if request.method == 'POST':
-        sender = request.form['sender']
-        amount = request.form['amount']
-        receiver = request.form['receiver']
-
-        if len(sender) > 0 or len(amount) > 0 or len(receiver) > 0:
-            if not bc.verify_input(sender, amount, receiver):
-                feedback = ["The input is invalid. Please try again."]
-                return render_template('index.html', feedback=feedback)
-
-        bc.create_block(payer=sender, amount=amount, receiver=receiver)
-        return redirect(url_for('index'))
-
     return render_template('index.html')
+
+
+@app.route('/addgraduate', methods=['POST', 'GET'])
+def add_graduate():
+    if request.method == 'POST':
+        key = request.form['key']
+        name = request.form['name']
+        birthday = request.form['birthday']
+        subject = request.form['subject']
+        graduation = request.form['graduation']
+
+        if len(name) == 0 or subject == "Choose..." or birthday == "" or graduation == "" or key != "12345":
+            feedback = ["The input is invalid. Please try again."]
+            return render_template('addgraduate.html', feedback=feedback)
+
+        bc.create_block(name=name, birthday=birthday, subject=subject, graduation=graduation, key=key)
+        return redirect(url_for('add_graduate'))
+
+    return render_template('addgraduate.html')
+
+
+@app.route('/checkgraduate', methods=['POST', 'GET'])
+def check_graduate():
+    if request.method == 'POST':
+        name = request.form['name']
+        birthday = request.form['birthday']
+        subject = request.form['subject']
+        graduation = request.form['graduation']
+
+        if len(name) == 0 or subject == "Choose..." or birthday == "" or graduation == "":
+            feedback = ["The input is invalid. Please try again."]
+            return render_template('checkgraduate.html', feedback=feedback)
+
+        result = bc.verify_diploma(name=name, birthday=birthday, subject=subject, graduation=graduation)
+        return render_template('diploma.html', results=result)
+
+    return render_template('checkgraduate.html')
 
 
 @app.route('/verification', methods=['GET'])

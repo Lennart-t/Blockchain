@@ -1,6 +1,7 @@
 {
-    "payer": "Lennart",
-    "amount": "10.10",
-    "payee": "Jason",
-    "hash": "66fc04dd815497bbecf798cf6ebfd5bfc231502f9f93521fdcc905b3bc031134"
+    "name": "Laurens",
+    "date of birth": "",
+    "study program": "Bachelor in Business Administration",
+    "date of graduation": "2000-01-01",
+    "hash": "ae1fae75d3bf7a81112784fadb417006ccfc42f2a02ccd66b6a1902d5caf45c7"
 }

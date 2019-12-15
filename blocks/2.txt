@@ -1,6 +1,7 @@
 {
-    "payer": "Laurens",
-    "amount": "1000",
-    "payee": "Jonas",
-    "hash": "63be5c479ecdd8294a08de15f467485ea0fece782ad67b92a6da3c3627404109"
+    "name": "Laurens",
+    "date of birth": "2000-01-01",
+    "study program": "3",
+    "date of graduation": "2000-01-01",
+    "hash": "e0fb3c2c46d6c389fc69d96fe26d8283234fe2858744b0ff2fd6159646bb55b9"
 }

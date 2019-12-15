@@ -1,0 +1,7 @@
+{
+    "name": "Laurens",
+    "date of birth": "2002-02-22",
+    "study program": "Bachelor in International Affairs",
+    "date of graduation": "2000-02-22",
+    "hash": "02220bf63323b3a40a3f04bfa4c56e880edbc9ea91bbcf046ea0e6b86fc1b18b"
+}

@@ -1,6 +1,7 @@
 {
-    "payer": "Laurens",
-    "amount": "1000",
-    "payee": "Laurens",
-    "hash": "eaeb2c1dc64d63337360108e894462b041178dde62766393a5841a6f2ea0ac1b"
+    "name": "Laurens",
+    "date of birth": "2001-03-22",
+    "study program": "Bachelor in Law and Economics",
+    "date of graduation": "2003-03-22",
+    "hash": "5e2d3fb9bf67a9fa882a16e9351425aec9c9bb87512a1d3598ad883b92f202d4"
 }

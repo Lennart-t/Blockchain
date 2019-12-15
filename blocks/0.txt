@@ -1,6 +1,7 @@
 {
-	“payer”: “Genesis”,
-	“amount”: 1000000,
-	“payee”: “Genesis2”,
+	“name”: “Genesis”,
+	“date of birth”: 1930-01-01,
+	“study program”: “Genesis2”,
+	"date of graduation": "2000-01-01";
 	“hash”: “”
 }

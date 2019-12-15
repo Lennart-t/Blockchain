@@ -1,0 +1,7 @@
+{
+    "name": "Laurens",
+    "date of birth": "2003-03-13",
+    "study program": "Master in Business Innovation",
+    "date of graduation": "2012-12-21",
+    "hash": "ca07c4b1b9e09fc41e25304f1520acfcfa23cbc7e376360c6703c0ada040b34d"
+}

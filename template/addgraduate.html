@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/HFV9CPt/Logo3.png" alt="Logo" border="0" width="100" height="100" vspace="25" hspace="25"></a></center>
+    <h1 align="center">Add a graduate.</h1><br>
+    {% for res in feedback %}
+        <div class="feedback" >
+            <center><strong style="color: red;">{{res}}</strong></center>
+            <br>
+        </div>
+    {% endfor %}
+    <p align="justify"> Using the HSG diploma verification system is easy: Just enter the name of the student (Graduate),
+        his/her date of birth, study subject and date of graduation.</p>
+
+    <form action="{{url_for('add_graduate')}}" method ="POST">
+        <div class="form_group">
+           <label for="InputPassword">University key: </label>
+           <input type="text" class="form-control" id="InputPassword" placeholder="Key" name="key" value="{{ request.form.get('key', '') }}">
+           <small id="InputPasswordHelpText" class="form-text text-muted">
+            Only authorized personnel from the University of St.Gallen can add graduates to the blockchain. Input the university key here.
+           </small>
+        </div>
+       &nbsp;&nbsp;
+        <div class="form_group">
+           <label for="InputPayer">Graduate name: </label>
+           <input type="text" class="form-control" id="InputPayer" placeholder="Name of graduate" name="name" value="{{ request.form.get('name', '') }}">
+           <small id="InputPlayerHelpText" class="form-text text-muted">
+            Please input the name of the person who has graduated.
+           </small>
+        </div>
+        &nbsp;&nbsp;
+
+       <div class="form_group">
+            <label for="InputDayOfBirth">Date of birth: </label>
+            <input class="custom-select my-1 mr-sm-2" type="date" id="InputDayOfBirth" name="birthday"
+               value="{{ request.form.get('birthday', '') }}"
+               min="1930-01-01" max="2019-12-31">
+           <small id="InputDayOfBirthHelpText" class="form-text text-muted">
+            Please input the date of birth here (dd/mm/yyyy).
+           </small>
+        </div>
+
+        <br>
+
+        <div class="form_group">
+          <label for="SubjectOfStudy">Study program:</label>
+              <select class="custom-select my-1 mr-sm-2" id="SubjectOfStudy" name="subject" >
+                <option selected>Choose...</option>
+                <option value="Bachelor in Business Administration">Bachelor in Business Administration</option>
+                <option value="Bachelor in Economics">Bachelor in Economics</option>
+                <option value="Bachelor in International Affairs">Bachelor in International Affairs</option>
+                  <option value="Bachelor in Law">Bachelor in Law</option>
+                  <option value="Bachelor in Law and Economics">Bachelor in Law and Economics</option>
+                  <option value="Master in Business Innovation">Master in Business Innovation</option>
+                  <option value="Master in Marketing Management">Master in Marketing Management</option>
+                  <option value="Master in Accounting and Finance">Master in Accounting and Finance</option>
+                  <option value="Master in Strategy and International Management">Master in Strategy and International Management</option>
+                  <option value="Master in Business Management">Master in Business Management</option>
+                  <option value="Master in Banking and Finance">Master in Banking and Finance</option>
+                  <option value="Master in Economics">Master in Economics</option>
+                  <option value="Master in International Affairs and Governance">Master in International Affairs and Governance</option>
+                  <option value="Master in International Law">Master in International Law</option>
+                  <option value="Master in Law">Master in Law</option>
+                  <option value="Master in Law and Economics">Master in Law and Economics</option>
+                  <option value="Master in Management (CEMS)">Master in Management (CEMS)</option>
+              </select>
+            <small id="SubjectOfStudyHelpText" class="form-text text-muted">
+            Please choose the study program in the drop-down box above.
+           </small>
+        </div>
+
+        <br>
+
+        <div class="form_group">
+            <label for="InputDayOfBirth">Date of graduation: </label>
+            <input class="custom-select my-1 mr-sm-2" type="date" id="InputDayOfGraduation" name="graduation"
+              value="{{ request.form.get('graduation', '') }}"
+               min="2000-01-01" max="2019-12-31">
+           <small id="InputDayOfGraduationHelpText" class="form-text text-muted">
+            Please input the date of graduation here (dd/mm/yyyy).
+           </small>
+        </div>
+
+        <br>
+
+       <center><button type="submit" class="btn btn-primary">Submit Graduation</button></center>
+    </form>
+
+    <br>
+    <form action="{{url_for('index')}}" method="GET">
+        <center><button type="submit" class="btn btn-secondary">Go back to home menu</button></center>
+    </form>
+    <br>
+    <br>
+
+
+{% endblock %}

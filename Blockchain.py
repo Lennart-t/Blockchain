@@ -3,25 +3,7 @@ import os
 import hashlib
 
 
-def verify_input(payer, amount, receiver):
-    if payer == '' or amount == '' or receiver == '':
-        return False
-
-    try:
-        float(amount)
-    except:
-        return False
-
-    if float(amount) <= 0:
-        return False
-
-    return True
-
-
-def create_block(payer, amount, receiver):
-    if not verify_input(payer, amount, receiver):
-        return
-
+def create_block(name, birthday, subject, graduation, key):
     try:
         os.chdir(os.curdir + "/blocks")
     except:
@@ -35,9 +17,10 @@ def create_block(payer, amount, receiver):
     previous_hash = create_hash(str(last_block))
 
     data = {
-                'payer': payer,
-                'amount': amount,
-                'payee': receiver,
+                'name': name,
+                'date of birth': birthday,
+                'study program': subject,
+                'date of graduation': graduation,
                 'hash': previous_hash
             }
 
@@ -78,27 +61,65 @@ def create_hash(block_name):
 def verify_chain():
     blocks = get_blocks()
     results = []
-    previous_result = ''
+    print(blocks)
 
-    for block in blocks[1:]:
+    for block in blocks[2:]:
         previous_hash = json.load(open(str(block) + ".txt"))['hash']
-
         previous_block = str(int(block)-1)
+        true_previous_hash = create_hash(previous_block)
 
-        true_hash = create_hash(previous_block)
-
-        if previous_hash == true_hash:
-            result = 'a Genuine Block'
-        elif previous_result == 'a Corrupted Block':
-            result = 'either Genuine or Corrupted, but we do not know for sure (the previous block was fake)'
+        if previous_hash == true_previous_hash:
+            try:
+                next_block = str(int(block) + 1)
+                current_hash = create_hash(block)
+                true_current_hash = json.load(open(str(next_block) + ".txt"))['hash']
+                if current_hash == true_current_hash:
+                    result = "a Genuine Block"
+                else:
+                    result = "a Corrupted Block"
+            except:
+                result = "a Genuine Block"
         else:
-            result = 'a Corrupted Block'
+            result = "a Corrupted Block"
 
-        results.append({'block': block, 'result': result})
-
-        previous_result = result
+        results.append({'block': previous_block, 'result': result})
 
     return results
 
 
+def verify_diploma(name, birthday, subject, graduation):
+    blocks = get_blocks()
+    results = []
+    result = "This is a fake diploma!"
+
+    for block in blocks[1:]:
+        previous_hash = json.load(open(str(block) + ".txt"))['hash']
+        b_name = json.load(open(str(block) + ".txt"))['name']
+        b_birthday = json.load(open(str(block) + ".txt"))['date of birth']
+        b_subject = json.load(open(str(block) + ".txt"))['study program']
+        b_graduation = json.load(open(str(block) + ".txt"))['date of graduation']
+
+        if b_name == name and b_birthday == birthday and b_subject == subject and b_graduation == graduation:
+            previous_block = str(int(block) - 1)
+            true_previous_hash = create_hash(previous_block)
+            if previous_hash == true_previous_hash:
+                try:
+                    next_block = str(int(block) + 1)
+                    current_hash = create_hash(block)
+                    true_current_hash = json.load(open(str(next_block) + ".txt"))['hash']
+                    if current_hash == true_current_hash:
+                        result = "This is a genuine diploma!"
+                        break
+                    else:
+                        result = "This is a fake diploma!"
+                        break
+                except:
+                    result = "This is a genuine diploma!"
+                    break
+            else:
+                result = "This is a fake diploma!"
+                break
+
+    results.append(result)
+    return results
 
