@@ -8,7 +8,8 @@
                 <h1 align="center"><strong style="color: blue;">{{res}}</strong></h1><br>
             </div>
         {% endfor %}
-    <p align="justify"> Some explanation about the different states of the blocks and how we verify the blocks.</p>
+    <p align="justify"> A diploma (block) can either be genuine (the block is in the blockchain and all data match with an existing block)
+        or fake (some of the data is inconsistent or there is not such block in the blockchain). </p>
 
     <form action="{{url_for('check_graduate')}}" method="GET">
         <center><button type="submit" class="btn btn-success">Verify another diploma</button></center>
