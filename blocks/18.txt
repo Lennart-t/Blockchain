@@ -1,0 +1,7 @@
+{
+    "name": "Laurens",
+    "date of birth": "1997-03-22",
+    "study program": "Bachelor in Law and Economics",
+    "date of graduation": "2004-03-13",
+    "hash": "61e3afc463a8cbc6c34391a63a7e45013893354e5c90439d2e38649bbf827d51"
+}

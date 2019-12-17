@@ -1,0 +1,7 @@
+{
+    "name": "Laurens",
+    "date of birth": "1997-03-22",
+    "study program": "Master in Marketing Management",
+    "date of graduation": "2009-03-22",
+    "hash": "701c178ad280c90178461d611c9f3880ffd4ecc129cbfba6b73802b491a1ba54"
+}
