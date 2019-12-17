@@ -84,6 +84,8 @@ def verify_chain():
 
         results.append({'block': previous_block, 'result': result})
 
+    results.append({'block': len(blocks) - 1, 'result': "the last bock in the chain: can genuine or fake"})
+
     return results
 
 
