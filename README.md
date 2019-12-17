@@ -8,7 +8,7 @@ Our project includes a Back End, which we developed using Python and a Front End
 
 Our dApp exists of one base-site, which contains the main menu with links to all three functions and their respective sites 1) Add a graduate, 2) Verify a diploma, 3) Verify entire blockchain. From all functions sites there is a button implemented to go back to the main menu.
 
-#### Overview over the functionalities of those three sites:
+#### Overview of functionalities of those three sites:
 
 <details>
 <summary>1) Add a graduate</summary>
