@@ -1,23 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-
 <center><a href="https://imgbb.com/"><img src="https://i.ibb.co/sKVV03b/Picture1.png" alt="Logo" border="0" width="100" height="100" vspace="25" hspace="25"></a></center>
     <h1 align="center">Add a graduate.</h1><br>
-    {% for res in feedback %}
         <div class="feedback" >
-            <center><strong style="color: red;">{{res}}</strong></center>
+            <center><strong style="color: {{color}};">{{feedback}}</strong></center>
             <br>
         </div>
-    {% endfor %}
     <p align="justify"> Using the HSG diploma verification system is easy: Just enter the name of the student (Graduate),
         his/her date of birth, study subject and date of graduation.</p>
 
     <form action="{{url_for('add_graduate')}}" method ="POST">
         <div class="form_group">
            <label for="InputPassword">University key: </label>
-           <input type="text" class="form-control" id="InputPassword" placeholder="Key" name="key" value="{{ request.form.get('key', '') }}">
+           <input type="text" class="form-control" id="InputPassword" placeholder="Key" name="key" value="{{ key }}">
            <small id="InputPasswordHelpText" class="form-text text-muted">
             Only authorized personnel from the University of St.Gallen can add graduates to the blockchain. Input the university key here.
            </small>
@@ -25,7 +21,7 @@
        &nbsp;&nbsp;
         <div class="form_group">
            <label for="InputPayer">Graduate name: </label>
-           <input type="text" class="form-control" id="InputPayer" placeholder="Name of graduate" name="name" value="{{ request.form.get('name', '') }}">
+           <input type="text" class="form-control" id="InputPayer" placeholder="Name of graduate" name="name" value="{{ name }}">
            <small id="InputPlayerHelpText" class="form-text text-muted">
             Please input the name of the person who has graduated.
            </small>
@@ -35,7 +31,7 @@
        <div class="form_group">
             <label for="InputDayOfBirth">Date of birth: </label>
             <input class="custom-select my-1 mr-sm-2" type="date" id="InputDayOfBirth" name="birthday"
-               value="{{ request.form.get('birthday', '') }}"
+               value="{{ birthday }}"
                min="1930-01-01" max="2019-12-31">
            <small id="InputDayOfBirthHelpText" class="form-text text-muted">
             Please input the date of birth here (dd/mm/yyyy).
@@ -47,7 +43,7 @@
         <div class="form_group">
           <label for="SubjectOfStudy">Study program:</label>
               <select class="custom-select my-1 mr-sm-2" id="SubjectOfStudy" name="subject" >
-                <option selected value="{{subject}}">{{subject}}</option>
+                <option selected value="{{ subject }}">{{subject}}</option>
                 <option value="Bachelor in Business Administration">Bachelor in Business Administration</option>
                 <option value="Bachelor in Economics">Bachelor in Economics</option>
                 <option value="Bachelor in International Affairs">Bachelor in International Affairs</option>
@@ -76,7 +72,7 @@
         <div class="form_group">
             <label for="InputDayOfBirth">Date of graduation: </label>
             <input class="custom-select my-1 mr-sm-2" type="date" id="InputDayOfGraduation" name="graduation"
-              value="{{ request.form.get('graduation', '') }}"
+              value="{{ graduation }}"
                min="2000-01-01" max="2019-12-31">
            <small id="InputDayOfGraduationHelpText" class="form-text text-muted">
             Please input the date of graduation here (dd/mm/yyyy).
