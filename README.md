@@ -6,7 +6,7 @@ We have developed a *HSG diploma verification system*: a simple blockchain imple
 
 Our project includes a Back End, which we developed using Python and a Front End based on Python's Flask and a HTML-structure. For the main functionalities we followed a guide from [Anton Tarasov](https://u.today/how-to-build-a-blockchain-application-with-python). 
 
-Our dApp exists of one base-site, which contains the main menu with links to all three functions and their respective sites 1) Add a graduate, 2) Verify a diploma, 3) Verify entire blockchain. From all functions sites there is a button implemented to go back to the main menu.
+Our dApp exists of one index-site, which contains the main menu with links to all three functions and their respective sites 1) Add a graduate, 2) Verify a diploma, 3) Verify entire blockchain. From all functions sites there is a button implemented to go back to the main menu.
 
 #### Overview of functionalities of those three sites:
 
