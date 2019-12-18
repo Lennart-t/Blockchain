@@ -77,6 +77,6 @@ def diploma(result):
 
 
 # Standard statement that checks if the script is launched from the console and that runs our application if not.
-# Debug is added to allow flask to reload every time if code is changed.
+# Debug is added to allow flask to reload every time if code is changed. 
 if __name__ == '__main__':
     app.run(debug=True)
