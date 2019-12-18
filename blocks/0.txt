@@ -1,7 +1,7 @@
 {
 	“name”: “Genesis”,
 	“date of birth”: 1930-01-01,
-	“study program”: “Genesis2”,
+	“study program”: “Genesis”,
 	"date of graduation": "2000-01-01";
 	“hash”: “”
 }

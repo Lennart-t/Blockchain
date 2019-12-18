@@ -1,0 +1,7 @@
+{
+    "name": "Jonas Hansjosten",
+    "date of birth": "1997-03-08",
+    "study program": "Bachelor in International Affairs",
+    "date of graduation": "2018-09-01",
+    "hash": "4da6704aa9bb2199a0b3a813b83beede503c97c4d8f7bec4e9e40e9d3d329e83"
+}

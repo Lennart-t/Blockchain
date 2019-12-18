@@ -1,0 +1,7 @@
+{
+    "name": "Laurens Hamm",
+    "date of birth": "1997-03-22",
+    "study program": "Bachelor in Business Administration",
+    "date of graduation": "2019-09-01",
+    "hash": "5086abe0add4b1c85992d1cba2993940d05ca2ee8e31be0acd4b530d2431c27c"
+}

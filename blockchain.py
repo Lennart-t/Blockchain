@@ -72,8 +72,13 @@ def verify_chain():
     # Declaring variable blocks that is the output of the previously defined function get_blocks() to get all blocks in a sorted order.
     blocks = get_blocks()
     results = []
-    # For-loop to iterate through the blocks and read previous and next blocks' hashes and compare them.
 
+    # If the chain only contains the genesis block, return this feedback message.
+    if len(blocks) == 1:
+        results.append("There are no blocks in the chain!")
+        return results
+
+    # For-loop to iterate through the blocks and read previous and next blocks' hashes and compare them.
     for block in blocks[2:]:
         previous_hash = json.load(open(str(block) + ".txt"))['hash']
         previous_block = str(int(block)-1)
@@ -98,9 +103,10 @@ def verify_chain():
             result = "a Corrupted Block"
 
         # Each result is added to a list of tuples in combination with the number of the block.
-        results.append({'block': previous_block, 'result': result})
+        results.append("Block " + previous_block + " is " + result + ".")
 
-    results.append({'block': len(blocks) - 1, 'result': "the last bock in the chain: unverifiable"})
+    result = "the last bock in the chain: unverifiable"
+    results.append("Block " + str(len(blocks)-1) + " is " + result + ".")
     return results
 
 

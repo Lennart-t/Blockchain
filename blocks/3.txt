@@ -1,0 +1,7 @@
+{
+    "name": "Lennart Teuber",
+    "date of birth": "1997-04-13",
+    "study program": "Bachelor in Law and Economics",
+    "date of graduation": "2019-09-01",
+    "hash": "fff1d5a8660adc08e230bbe6a45f8f2edcf99d428bfdbceb023d287fb5817c9b"
+}
