@@ -1,4 +1,5 @@
-<!html code for first page with the main menu, which contains buttons to be redirected to other three pages. We added a logo and a short descirption>
+<!html code for first page with the main menu, which contains buttons to be redirected to other three pages. We added a logo and a short description.>
+
 {% extends 'base.html' %}
 
 {% block content %}
@@ -26,4 +27,6 @@
     <form action="{{url_for('verification')}}" method="GET">
         <center><button type="submit" class="btn btn-success">Verify blockchain</button></center>
     </form>
+
+    <br>
 {% endblock %}

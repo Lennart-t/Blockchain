@@ -1,7 +1,0 @@
-{
-    "name": "Laurens",
-    "date of birth": "2000-01-01",
-    "study program": "3",
-    "date of graduation": "2000-01-01",
-    "hash": "e0fb3c2c46d6c389fc69d96fe26d8283234fe2858744b0ff2fd6159646bb55b9"
-}

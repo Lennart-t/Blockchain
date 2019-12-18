@@ -1,7 +1,0 @@
-{
-    "name": "Laurens",
-    "date of birth": "2012-04-16",
-    "study program": "Master in Economics",
-    "date of graduation": "2019-04-16",
-    "hash": "de8f4c723917434c097758bf3e03ebd6060e241f4534e68f3a522513eb722059"
-}

@@ -1,4 +1,7 @@
-<!HTML code for second page, which enables user to check if a specific HSG-diploma exists. Main feature of page is again a form, which the user can fill out. The input of this form are linked to the function chech_graduate() in main.py. As before we used Bootstrap features to improve the form.>  
+<!HTML code for second page, which enables user to check if a specific HSG-diploma exists in the blockchain and
+whether this diploma is genuine. Main feature of page is again a form, which the user can fill out. The input of this
+form is linked to the function chech_graduate() in main.py. As before we used Bootstrap features to improve the form.>
+
 {% extends 'base.html' %}
 
 {% block content %}
@@ -29,7 +32,7 @@
             <label for="InputDayOfBirth">Date of birth: </label>
             <input class="custom-select my-1 mr-sm-2" type="date" id="InputDayOfBirth" name="birthday"
                value="{{ request.form.get('birthday', '') }}"
-               min="1930-01-01" max="2019-12-31">
+               min="1930-01-01" max="2020-02-14">
            <small id="InputDayOfBirthHelpText" class="form-text text-muted">
             Please input the date of birth here (dd/mm/yyyy).
            </small>
@@ -49,7 +52,7 @@
                   <option value="Master in Business Innovation">Master in Business Innovation</option>
                   <option value="Master in Marketing Management">Master in Marketing Management</option>
                   <option value="Master in Accounting and Finance">Master in Accounting and Finance</option>
-                  <option value="Master in Strategy and International Management">Master in Strategy and International Management</option>
+                  <option value="Master in Strategy and International Management (SIM)">Master in Strategy and International Management</option>
                   <option value="Master in Business Management">Master in Business Management</option>
                   <option value="Master in Banking and Finance">Master in Banking and Finance</option>
                   <option value="Master in Economics">Master in Economics</option>
@@ -70,7 +73,7 @@
             <label for="InputDayOfBirth">Date of graduation: </label>
             <input class="custom-select my-1 mr-sm-2" type="date" id="InputDayOfGraduation" name="graduation"
               value="{{ request.form.get('graduation', '') }}"
-               min="2000-01-01" max="2019-12-31">
+               min="2000-01-01" max="2020-02-14">
            <small id="InputDayOfGraduationHelpText" class="form-text text-muted">
             Please input the date of graduation here (dd/mm/yyyy).
            </small>

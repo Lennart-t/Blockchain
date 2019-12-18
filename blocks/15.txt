@@ -1,7 +1,0 @@
-{
-    "name": "Laurens",
-    "date of birth": "2019-06-16",
-    "study program": "Master in Strategy and International Management",
-    "date of graduation": "2001-03-19",
-    "hash": "db8e31fb4fd0715d276dd276d731385803e7107b7ce0e36d13e1aa64fe327b26"
-}

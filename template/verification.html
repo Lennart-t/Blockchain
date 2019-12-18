@@ -1,4 +1,6 @@
-<!HTML code for results of function verification() in main.py. Users will be directed to this page directly after clicking on the main page (index.html) the button "Click here to verify the entire blockchain">
+<!HTML code for results of function verification() in main.py. Users will be directed to this page directly after
+clicking on the main page (index.html) the button "Click here to verify the entire blockchain.">
+
 {% extends 'base.html' %}
 
 {% block content %}
@@ -14,8 +16,10 @@
     {% endfor %}
 
     <br>
+
     <form action="{{url_for('index')}}" method="GET">
         <center><button type="submit" class="btn btn-secondary">Go back to home menu</button></center>
     </form>
+
     <br>
 {% endblock %}

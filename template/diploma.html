@@ -1,4 +1,5 @@
-<!HTML code for result page of function check_graduate(). User will be redirected to this page after pressing button "Verify diploma" on page checkgraduate.html> 
+<!HTML code for result page of function check_graduate().User will be redirected to this page after pressing
+button "Verify diploma" on page checkgraduate.html (if all inputs are correct).>
 {% extends 'base.html' %}
 
 {% block content %}
@@ -15,8 +16,12 @@
     <form action="{{url_for('check_graduate')}}" method="GET">
         <center><button type="submit" class="btn btn-success">Verify another diploma</button></center>
     </form>
+
     <br>
+
     <form action="{{url_for('index')}}" method="GET">
         <center><button type="submit" class="btn btn-secondary">Go back to home menu</button></center>
     </form>
+
+    <br>
 {% endblock %}

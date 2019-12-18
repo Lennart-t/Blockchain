@@ -1,7 +1,0 @@
-{
-    "name": "Laurens",
-    "date of birth": "1997-03-22",
-    "study program": "Master in Banking and Finance",
-    "date of graduation": "",
-    "hash": "3982fe00b1f0438a172ddb4ad431017a7a675fda7321905965e5434e42d5c9a5"
-}

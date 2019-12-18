@@ -1,7 +1,0 @@
-{
-    "name": "Laurens",
-    "date of birth": "1997-03-22",
-    "study program": "Bachelor in Business Administration",
-    "date of graduation": "2007-10-10",
-    "hash": "af9810c385cbc08854ace911e8ff9cc0e165b5c4b92f203c706fed12cc3baaae"
-}
