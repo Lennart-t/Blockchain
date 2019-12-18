@@ -33,3 +33,4 @@ This page enables users to check, whether any blocks were manipulated and theref
 1) Download the ZIP from Github.
 2) Open the File in the ZIP in your virtual environment (please do not change the folder structure and names to ensure compatibility).
 3) Run main.py and open your localhost.
+
